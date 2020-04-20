@@ -1,6 +1,7 @@
 ## Roadmap
 
 * Make the circle a componenent that takes items and their "steps" as props
+* https://css-tricks.com/snippets/sass/placing-items-circle/
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
