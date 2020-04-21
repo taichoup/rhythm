@@ -65,12 +65,13 @@ body {
   align-items: center;
 }
 
+
 /* STYLING THE RANGE INPUT */
 
 input[type=range] {
   -webkit-appearance: none;
   margin: 18px 0;
-  /* width: 100%; */
+  background-color: transparent;
 }
 input[type=range]:focus {
   outline: none;

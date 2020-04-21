@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
 function App() {
@@ -28,11 +29,11 @@ function App() {
         <input type="range" id="bpm" name="bpm" min="60" max="240" step="1" onChange={handleUserInput} onMouseUp={updateSpeed}/>
         <span class="bpm">{`${bpm} BPM`}</span>
       </div>
-        <div id="wrapper">
+    <div id="wrapper">
           <div id="path"></div>
           <div id="circle"></div>
         </div>
-        <button id="btn" onClick={() => toggleRotate()}>Start!</button>
+        <button id="btn" class="btn btn-primary" onClick={() => toggleRotate()}>Start!</button>
     </div>
   );
 }
