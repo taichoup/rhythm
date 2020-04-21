@@ -15,12 +15,8 @@ function App() {
     document.getElementById("circle").style["animation-duration"] = `${60 / bpm * 4}s`;
   }
 
-  // todo: rewrite this in a reacty way
   function toggleRotate(speed) {
     setIsRunning(!isRunning);
-    let c = document.getElementById("circle");
-    let b = document.getElementById("btn");
-    b.innerText === "Start!" ? b.innerText = "Stop" : b.innerText = "Start!";
   }
 
   return (
