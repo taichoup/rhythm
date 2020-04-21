@@ -2,6 +2,10 @@ body {
   background-color: #f3f3f3;
 }
 
+button:focus {
+  border: 0px;
+}
+
 #circle {
     width: 20px;
     height: 20px;
