@@ -21,7 +21,7 @@ export function Circle(props) {
         <span className='deg315'><div className="marker"></div></span>
         <span className='deg337-5'><div className="marker"></div></span>
       </div>
-      <div id="circle" className={props.spin ? "circle-rotate" : ""}></div>
+      <div className={`circle ${props.spin ? "circle-rotate" : ""}`}></div>
     </div>
   );
 }

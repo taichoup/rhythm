@@ -13,7 +13,8 @@ function App() {
   }
 
   const updateSpeed = () => {
-    document.getElementById("circle").style["animation-duration"] = `${60 / bpm * 4}s`;
+    const circles = document.getElementsByClassName("circle");
+    [...circles].forEach(elt => elt.style["animation-duration"] = `${60 / bpm * 4}s`)
   }
 
   function toggleRotate() {
@@ -27,6 +28,10 @@ function App() {
         <span className="bpm">{`${bpm} BPM`}</span>
       </div>
       <Circle spin={isRunning}/>
+      <Circle spin={isRunning}/>
+      <Circle spin={isRunning}/>
+      <Circle spin={isRunning}/>
+      <Circle spin={isRunning}/>
       <button 
         id="btn"
         className={`btn ${isRunning ? "btn-warning" : "btn-primary"}`}
@@ -34,7 +39,7 @@ function App() {
       >{isRunning ? "Stop" : "Start!"}</button>
 
 
-    </div>
+    </div> 
   );
 }
 
