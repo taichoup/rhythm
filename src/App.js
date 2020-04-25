@@ -6,10 +6,6 @@ function App() {
 
   const [bpm, setBpm] = useState(60);
   const [isRunning, setIsRunning] = useState(false);
-  const [isRunning2, setIsRunning2] = useState(false);
-  const [degree, setDegree] = useState(0);
-
-// V1 -----------------------------------------------------
 
   const handleUserInput = (event) => {
     setBpm(event.target.value);
