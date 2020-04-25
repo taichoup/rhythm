@@ -50,7 +50,7 @@ button:focus {
 .bpm {
 font-family: 'Courier New', Courier, monospace;
 font-size: larger;
-margin: auto 20px;
+margin: 2em 1em;
 }
   
 #bpm-wrapper {
@@ -122,7 +122,7 @@ margin: -0.5em;
   
   input[type=range] {
     -webkit-appearance: none;
-    margin: 18px 0;
+    margin: 1em 0em 1em 0em;
     background-color: transparent;
   }
   input[type=range]:focus {

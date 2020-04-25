@@ -28,10 +28,10 @@ function App() {
         <span className="bpm">{`${bpm} BPM`}</span>
       </div>
       <div id="circles-wrapper">
-        <Circle spin={isRunning} label="Left foot"/>
         <Circle spin={isRunning} label="Left hand"/>
-        <Circle spin={isRunning} label="Right hand"/>
+        <Circle spin={isRunning} label="Left foot"/>
         <Circle spin={isRunning} label="Right foot"/>
+        <Circle spin={isRunning} label="Right hand"/>
       </div>
       <button 
         id="btn"
