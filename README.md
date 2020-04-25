@@ -2,6 +2,7 @@
 
 * Make the circle a componenent that takes items and their "steps" as props
 * https://css-tricks.com/snippets/sass/placing-items-circle/
+* https://www.youtube.com/watch?v=nrHRYliYNQk&list=PL5wYPwL6FJKfdA00Ct2YP0TNxa8fXxjXW
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

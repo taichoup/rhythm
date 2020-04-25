@@ -7,55 +7,47 @@ button:focus {
 }
 
 #circle {
-    width: 20px;
-    height: 20px;
+    width: 1.5em;
+    height: 1.5em;
     border-radius: 50%;
     background-color: blue;
-    margin: -180px 0px 0px -180px;
+    transform: rotate(270deg) translate(9em)
+    /* margin-top: -18em; */
 }
 
-#path {
-    border: 1px dotted blue;  
-    border-radius: 50%;
-    width: 255px;
-    height: 255px;
-    position: absolute;
-}
 
 @keyframes rotation {
     from {
-        transform: rotate(0deg);
-        transform-origin: 100px 100px;
-        }
-    to {
-        transform: rotate(360deg);
-        transform-origin: 100px 100px;
-        }
-}
-
+      transform: rotate(270deg) translate(9em);
+      }
+      to {
+        transform: rotate(630deg) translate(9em);
+      }
+    }
+    
 #wrapper {
-    width: 400px;
-    height: 400px;
-    margin: 30px auto;
-    background-color:white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  width: 30em;
+  height: 30em;
+  margin: 2em auto;
+  background-color:white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .circle-rotate {
-    animation-name: rotation;
-    animation-duration: 4s;
-    animation-iteration-count: infinite;
-    animation-timing-function:linear;
+  animation-name: rotation;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function:linear;
 }
 
 .bpm {
-  font-family: 'Courier New', Courier, monospace;
-  font-size: larger;
-  margin: auto 20px;
+font-family: 'Courier New', Courier, monospace;
+font-size: larger;
+margin: auto 20px;
 }
-
+  
 #bpm-wrapper {
   display: flex;
   justify-content: center;
@@ -68,21 +60,65 @@ button:focus {
   flex-direction: column;
   align-items: center;
 }
+  
 
-
-/* STYLING THE RANGE INPUT */
-
-input[type=range] {
-  -webkit-appearance: none;
-  margin: 18px 0;
-  background-color: transparent;
+.circle-container {
+  position: fixed;
+  width: 18em;
+  height: 18em;
+  /* padding: 2.8em; */
+  /*2.8em = 2em*1.4 (2em = half the width of a marker, 1.4 = sqrt(2))*/
+  border: dashed .1em lightgray;
+  border-radius: 50%;
+  /* margin: 1.75em auto 0; */
 }
-input[type=range]:focus {
-  outline: none;
+
+.circle-container span {
+display: block;
+position: absolute;
+top: 50%; left: 50%;
+/* this needs to be half the width and height of a marker */
+margin: -0.5em; 
 }
-input[type=range]::-webkit-slider-runnable-track {
-  width: 100%;
-  height: 8.4px;
+
+/* .circle-container img { display: block; width: 100%; } */
+.deg0 { transform: translate(9em); } /* must be half the width of the wrapper */
+.deg22-5 { transform: rotate(22.5deg) translate(9em);}
+.deg45 { transform: rotate(45deg) translate(9em); }
+.deg67-5 { transform: rotate(67.5deg) translate(9em); }
+.deg90 { transform: rotate(90deg) translate(9em); }
+.deg110-5 { transform: rotate(110.5deg) translate(9em); }
+.deg135 { transform: rotate(135deg) translate(9em); }
+.deg157-5 { transform: rotate(157.5deg) translate(9em); }
+.deg180 { transform: translate(-9em); } /* must be half the width of the wrapper */
+.deg202-5 { transform: rotate(202.5deg) translate(9em); }
+.deg225 { transform: rotate(225deg) translate(9em); }
+.deg247-5 { transform: rotate(247.5deg) translate(9em); }
+.deg270 { transform: rotate(270deg) translate(9em); }
+.deg292-5 { transform: rotate(292.5deg) translate(9em); }
+.deg315 { transform: rotate(315deg) translate(9em); }
+.deg337-5 { transform: rotate(337.5deg) translate(9em); }
+
+.marker {
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  background-color: #f3f3f3;
+}
+  
+  /* STYLING THE RANGE INPUT */
+  
+  input[type=range] {
+    -webkit-appearance: none;
+    margin: 18px 0;
+    background-color: transparent;
+  }
+  input[type=range]:focus {
+    outline: none;
+  }
+  input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 8.4px;
   cursor: pointer;
   animate: 0.2s;
   box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
@@ -160,3 +196,4 @@ input[type=range]:focus::-ms-fill-lower {
 input[type=range]:focus::-ms-fill-upper {
   background: #367ebd;
 }
+
