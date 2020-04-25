@@ -27,8 +27,12 @@ function App() {
         <input type="range" id="bpm" name="bpm" min="60" max="240" step="1" onChange={handleUserInput} onMouseUp={updateSpeed}/>
         <span className="bpm">{`${bpm} BPM`}</span>
       </div>
-      <Circle spin={isRunning}/>
-      <Circle spin={isRunning}/>
+      <div id="circles-wrapper">
+        <Circle spin={isRunning} label="Left foot"/>
+        <Circle spin={isRunning} label="Left hand"/>
+        <Circle spin={isRunning} label="Right hand"/>
+        <Circle spin={isRunning} label="Right foot"/>
+      </div>
       <button 
         id="btn"
         className={`btn ${isRunning ? "btn-warning" : "btn-primary"}`}

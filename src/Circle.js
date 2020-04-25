@@ -2,7 +2,7 @@ import React from "react";
 
 export function Circle(props) {
   return (
-    <div id="wrapper">
+    <div className='wrapper'>
       <div className='circle-container'>
         <span className='deg0'><div className="marker" id="runner"></div></span>
         <span className='deg22-5'><div className="marker"></div></span>
@@ -22,6 +22,7 @@ export function Circle(props) {
         <span className='deg337-5'><div className="marker"></div></span>
       </div>
       <div className={`circle ${props.spin ? "circle-rotate" : ""}`}></div>
+      <span class='bodypart-label'>{props.label}</span>
     </div>
   );
 }
