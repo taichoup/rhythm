@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
+import { Circle } from './Circle';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
@@ -25,28 +26,7 @@ function App() {
         <input type="range" id="bpm" name="bpm" min="60" max="240" step="1" onChange={handleUserInput} onMouseUp={updateSpeed}/>
         <span className="bpm">{`${bpm} BPM`}</span>
       </div>
-      <div id="wrapper">
-        {/* <div id="path"></div> */}
-        <div className='circle-container'>
-          <span className='deg0'><div className="marker" id="runner"></div></span>
-          <span className='deg22-5'><div className="marker"></div></span>
-          <span className='deg45'><div className="marker"></div></span>
-          <span className='deg67-5'><div className="marker"></div></span>
-          <span className='deg90'><div className="marker"></div></span>
-          <span className='deg110-5'><div className="marker"></div></span>
-          <span className='deg135'><div className="marker"></div></span>
-          <span className='deg157-5'><div className="marker"></div></span>
-          <span className='deg180'><div className="marker"></div></span>
-          <span className='deg202-5'><div className="marker"></div></span>
-          <span className='deg225'><div className="marker"></div></span>
-          <span className='deg247-5'><div className="marker"></div></span>
-          <span className='deg270'><div className="marker"></div></span>
-          <span className='deg292-5'><div className="marker"></div></span>
-          <span className='deg315'><div className="marker"></div></span>
-          <span className='deg337-5'><div className="marker"></div></span>
-        </div>
-        <div id="circle" className={isRunning ? "circle-rotate" : ""}></div>
-      </div>
+      <Circle spin={isRunning}/>
       <button 
         id="btn"
         className={`btn ${isRunning ? "btn-warning" : "btn-primary"}`}

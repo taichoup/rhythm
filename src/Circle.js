@@ -3,9 +3,25 @@ import React from "react";
 export function Circle(props) {
   return (
     <div id="wrapper">
-      <div id="path"></div>
-      {/* If I want to re-use this component I need to make it possible for the toggle function to select all of them (so the ID here is not a good idea) */}
-      <div id="circle" className={props.state ? "circle-rotate" : ""}></div>
+      <div className='circle-container'>
+        <span className='deg0'><div className="marker" id="runner"></div></span>
+        <span className='deg22-5'><div className="marker"></div></span>
+        <span className='deg45'><div className="marker"></div></span>
+        <span className='deg67-5'><div className="marker"></div></span>
+        <span className='deg90'><div className="marker"></div></span>
+        <span className='deg110-5'><div className="marker"></div></span>
+        <span className='deg135'><div className="marker"></div></span>
+        <span className='deg157-5'><div className="marker"></div></span>
+        <span className='deg180'><div className="marker"></div></span>
+        <span className='deg202-5'><div className="marker"></div></span>
+        <span className='deg225'><div className="marker"></div></span>
+        <span className='deg247-5'><div className="marker"></div></span>
+        <span className='deg270'><div className="marker"></div></span>
+        <span className='deg292-5'><div className="marker"></div></span>
+        <span className='deg315'><div className="marker"></div></span>
+        <span className='deg337-5'><div className="marker"></div></span>
+      </div>
+      <div id="circle" className={props.spin ? "circle-rotate" : ""}></div>
     </div>
   );
 }
