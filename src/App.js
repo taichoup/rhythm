@@ -29,9 +29,6 @@ function App() {
       </div>
       <Circle spin={isRunning}/>
       <Circle spin={isRunning}/>
-      <Circle spin={isRunning}/>
-      <Circle spin={isRunning}/>
-      <Circle spin={isRunning}/>
       <button 
         id="btn"
         className={`btn ${isRunning ? "btn-warning" : "btn-primary"}`}

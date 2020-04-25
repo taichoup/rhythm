@@ -63,7 +63,7 @@ margin: auto 20px;
   
 
 .circle-container {
-  position: fixed;
+  position: absolute;
   width: 18em;
   height: 18em;
   /* padding: 2.8em; */
