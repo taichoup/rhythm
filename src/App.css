@@ -86,23 +86,30 @@ top: 50%; left: 50%;
 margin: -0.5em; 
 }
 
-/* .circle-container img { display: block; width: 100%; } */
-.deg0 { transform: translate(9em); } /* must be half the width of the wrapper */
+.deg0 { transform: translate(9em);}  /* must be half the width of the wrapper */
 .deg22-5 { transform: rotate(22.5deg) translate(9em);}
-.deg45 { transform: rotate(45deg) translate(9em); }
-.deg67-5 { transform: rotate(67.5deg) translate(9em); }
-.deg90 { transform: rotate(90deg) translate(9em); }
-.deg110-5 { transform: rotate(110.5deg) translate(9em); }
-.deg135 { transform: rotate(135deg) translate(9em); }
-.deg157-5 { transform: rotate(157.5deg) translate(9em); }
-.deg180 { transform: translate(-9em); } /* must be half the width of the wrapper */
-.deg202-5 { transform: rotate(202.5deg) translate(9em); }
-.deg225 { transform: rotate(225deg) translate(9em); }
-.deg247-5 { transform: rotate(247.5deg) translate(9em); }
-.deg270 { transform: rotate(270deg) translate(9em); }
-.deg292-5 { transform: rotate(292.5deg) translate(9em); }
-.deg315 { transform: rotate(315deg) translate(9em); }
-.deg337-5 { transform: rotate(337.5deg) translate(9em); }
+.deg30 { transform: rotate(30deg) translate(9em);}
+.deg45 { transform: rotate(45deg) translate(9em);}
+.deg60 { transform: rotate(60deg) translate(9em);}
+.deg67-5 { transform: rotate(67.5deg) translate(9em);}
+.deg90 { transform: rotate(90deg) translate(9em);}
+.deg112-5 { transform: rotate(112.5deg) translate(9em);}
+.deg120 { transform: rotate(120deg) translate(9em);}
+.deg135 { transform: rotate(135deg) translate(9em);}
+.deg150 { transform: rotate(150deg) translate(9em);}
+.deg157-5 { transform: rotate(157.5deg) translate(9em);}
+.deg180 { transform: translate(-9em);} /* must be half the width of the wrapper */
+.deg202-5 { transform: rotate(202.5deg) translate(9em);}
+.deg210 { transform: rotate(210deg) translate(9em);}
+.deg225 { transform: rotate(225deg) translate(9em);}
+.deg240 { transform: rotate(240deg) translate(9em);}
+.deg247-5 { transform: rotate(247.5deg) translate(9em);}
+.deg270 { transform: rotate(270deg) translate(9em);}
+.deg292-5 { transform: rotate(292.5deg) translate(9em);}
+.deg300 { transform: rotate(300deg) translate(9em);}
+.deg315 { transform: rotate(315deg) translate(9em);}
+.deg330 { transform: rotate(330deg) translate(9em);}
+.deg337-5 { transform: rotate(337.5deg) translate(9em);}
 
 .marker {
   width: 1em;
@@ -209,3 +216,25 @@ input[type=range]:focus::-ms-fill-upper {
   background: #367ebd;
 }
 
+#blip {
+  align-self: center;
+  margin-left: 0.5em;
+  border-radius: 50%;
+  height: 1em;
+  width: 1em;
+}
+
+.blipping {
+  background-color: red;
+}
+
+.hit {
+  border: .1em solid black;
+  border-radius: 50%;
+}
+
+#controls-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}

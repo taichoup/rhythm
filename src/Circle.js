@@ -1,28 +1,41 @@
 import React from "react";
 
+// props are spin, label, signature, rhythm
 export function Circle(props) {
+
+  const twoByFour = [0, 1, 2, 3, 4, 5, 6, 7]
+    .map(item => `deg${item * 45}`); 
+
+  const threeByFour = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+    .map(item => `deg${item * 30}`);
+
+  const fourByFour = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+    .map(item => `deg${item * 22.5}`)
+    .map(item => item.replace(/\./gi, '-'));
+
+  const signatures = {
+    "2": twoByFour,
+    "3": threeByFour,
+    "4": fourByFour
+  }
+
+  const signature = props.signature;
+  const rhythm = props.rhythm;
+
   return (
     <div className='wrapper'>
       <div className='circle-container'>
-        <span className='deg0'><div className="marker" id="runner"></div></span>
-        <span className='deg22-5'><div className="marker"></div></span>
-        <span className='deg45'><div className="marker"></div></span>
-        <span className='deg67-5'><div className="marker"></div></span>
-        <span className='deg90'><div className="marker"></div></span>
-        <span className='deg110-5'><div className="marker"></div></span>
-        <span className='deg135'><div className="marker"></div></span>
-        <span className='deg157-5'><div className="marker"></div></span>
-        <span className='deg180'><div className="marker"></div></span>
-        <span className='deg202-5'><div className="marker"></div></span>
-        <span className='deg225'><div className="marker"></div></span>
-        <span className='deg247-5'><div className="marker"></div></span>
-        <span className='deg270'><div className="marker"></div></span>
-        <span className='deg292-5'><div className="marker"></div></span>
-        <span className='deg315'><div className="marker"></div></span>
-        <span className='deg337-5'><div className="marker"></div></span>
+        {signatures[props.signature]
+          .map(
+            i => <span className={`${i}${rhythm[signatures[signature].indexOf(i)] ? " hit":""}`}><div className="marker"></div></span>
+          )
+          // .map(
+          //   i => props.rhythm[signatures[props.signature].indexOf(i)] ?
+          // )
+        };
       </div>
       <div className={`circle ${props.spin ? "circle-rotate" : ""}`}></div>
-      <span class='bodypart-label'>{props.label}</span>
+      <span className='bodypart-label'>{props.label}</span>
     </div>
   );
 }
