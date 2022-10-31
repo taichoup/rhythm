@@ -33,4 +33,4 @@ The build is minified and the filenames include the hashes.<br />
 
 ### `pnpm run deploy`
 
-publishes to [https://taichoup.github.io/rhythm](https://taichoup.github.io/rhythm) through the gh-pages branch and lib. See [this article](https://dev.to/kathryngrayson/deploying-your-cra-react-app-on-github-pages-2614) for more info on how this works.
+(the shorthand `pnpm deploy` is reserved, so we have to use "run" for this commmand). Publishes to [https://taichoup.github.io/rhythm](https://taichoup.github.io/rhythm) through the gh-pages branch and lib. See [this article](https://dev.to/kathryngrayson/deploying-your-cra-react-app-on-github-pages-2614) for more info on how this works.
